@@ -17,7 +17,7 @@ export const registerCustomer = createAsyncThunk(
     async (customerFormData, thunkAPI) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/auth/register',
+          'https://doctorsnote-backend.onrender.com/api/auth/register',
           customerFormData,
           { withCredentials: true }
         );
@@ -36,7 +36,7 @@ export const registerCustomer = createAsyncThunk(
     async (doctorFormData, thunkAPI) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/auth/register-doctor',
+          'https://doctorsnote-backend.onrender.com/api/auth/register-doctor',
           doctorFormData,
           { withCredentials: true }
         );
@@ -55,7 +55,7 @@ export const registerCustomer = createAsyncThunk(
     async (adminFormData, thunkAPI) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/auth/register-admin',
+          'https://doctorsnote-backend.onrender.com/api/auth/register-admin',
           adminFormData,
           { withCredentials: true }
         );
@@ -74,7 +74,7 @@ export const registerCustomer = createAsyncThunk(
     async (formData, thunkAPI) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/auth/login',
+          'https://doctorsnote-backend.onrender.com/api/auth/login',
           formData,
           { withCredentials: true }
         );
@@ -96,7 +96,7 @@ export const registerCustomer = createAsyncThunk(
     async (_, thunkAPI) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/auth/logout',
+          'https://doctorsnote-backend.onrender.com/api/auth/logout',
           { withCredentials: true }
         );
         localStorage.removeItem('accessToken'); // Clear token

@@ -16,7 +16,7 @@ export const requestNote = createAsyncThunk(
   async (formData, thunkAPI) => {
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/requests/request-note',
+        'https://doctorsnote-backend.onrender.com/api/requests/request-note',
         formData,
         { withCredentials: true }
       );
@@ -35,7 +35,7 @@ export const getAllRequests = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/requests/get-requests',
+        'https://doctorsnote-backend.onrender.com/api/requests/get-requests',
         { withCredentials: true }
       );
       return response.data; // Response will contain all requests at response.data.allRequests
@@ -53,7 +53,7 @@ export const getRequestById = createAsyncThunk(
   async (requestId, thunkAPI) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/requests/${requestId}`,
+        `https://doctorsnote-backend.onrender.com/api/requests/${requestId}`,
         { withCredentials: true }
       );
       return response.data; // Response will contain the requested note at response.data.requestById
@@ -71,7 +71,7 @@ export const deleteRequest = createAsyncThunk(
   async (requestId, thunkAPI) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/requests/${requestId}`,
+        `https://doctorsnote-backend.onrender.com/api/requests/${requestId}`,
         { withCredentials: true }
       );
       return response.data; // The response will contain a success message

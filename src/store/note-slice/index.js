@@ -13,7 +13,7 @@ export const requestNote = createAsyncThunk(
   async (noteData, thunkAPI) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/notes/request",
+        "https://doctorsnote-backend.onrender.com/api/notes/request",
         noteData
       );
       return response.data;
